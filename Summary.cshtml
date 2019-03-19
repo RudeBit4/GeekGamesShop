@@ -1,0 +1,7 @@
+﻿@model GeekGameStore.Domain.Entities.Cart
+
+<div class="navbar-text navbar-right">
+    <b>Ваша корзина:</b>
+    @Model.Lines.Sum(x => x.Quantity) шт.,
+    @Model.ComputeTotalValue().ToString("# грн")
+</div>
